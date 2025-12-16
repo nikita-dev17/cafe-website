@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Адмін-панель
+{% endblock %}
+
+{% block main %}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+    <div class="card shadow-lg p-4" style="width: 1400px; border-radius: 15px;">
+        <div class="text-center mb-3">
+            <h1>Адмін-панель</h1>
+        </div>
+
+        <div class="text-center mb-4">
+            <a href="{{ url_for('admin.add_meal') }}" class="btn btn-primary btn-lg">Додати елемент меню</a>
+            <a href="{{ url_for('admin.logout') }}" class="btn btn-secondary btn-lg">Вийти</a>
+        </div>
+        <hr>
+        <h2>Наше меню</h2>
+        <div class="container my-4">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for meal in meals %}
+                <div class="col">
+                    <div class="card h-100">
+
+                        {% if meal["img"] %}
+                        <div class="ratio" style="--bs-aspect-ratio: 70%;">
+                            <img src="{{ meal['img'] }}" class="w-100 h-100 object-fit-cover" alt="{{ meal['name'] }}">
+                        </div>
+                        {% else %}
+                        <div class="ratio" style="--bs-aspect-ratio: 70%;">
+                            <img src="/static/img/noimage.jpg" class="w-100 h-100 object-fit-cover" alt="no image">
+                        </div>
+                        {% endif %}
+
+
+                        <div class="card-body d-flex flex-column">
+
+                            <div class="flex-grow-1">
+                                <h5 class="card-title">
+                                    {{ meal["name"] }}{% if meal["description"] %} — {{ meal["description"] }}{% endif %}
+                                </h5>
+
+                                <p class="card-text fw-bold">
+                                    {{ meal["price"] }} грн
+                                </p>
+                            </div>
+
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="{{ url_for('admin.edit_meal', meal_id=meal.meal_id) }}" class="btn btn-warning w-50">
+                                    Редактировать
+                                </a>
+                                <a href="{{ url_for('admin.delete_meal', meal_id=meal.meal_id) }}" class="btn btn-danger w-50"
+                                   onclick="return confirm('Удалить блюдо?');">
+                                    Удалить
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% if meals|length == 0 %}
+                <p class="text-center text-muted">Поки що немає страв у меню</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

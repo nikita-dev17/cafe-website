@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Меню
+{% endblock %}
+
+{% block main %}
+<main>
+    <section class="text-center py-5 bg-light">
+        <div class="container">
+            <h1 class="display-4">Наше меню</h1>
+            <p class="lead mt-3">Кава, десерти та напої для будь-якого настрою</p>
+        </div>
+    </section>
+
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for meal in meals %}
+            <div class="col">
+                <div class="card h-100 d-flex flex-column">
+
+                    {% if meal["img"] %}
+                    <div class="ratio" style="--bs-aspect-ratio: 70%;">
+                        <img src="{{ meal['img'] }}" class="w-100 h-100 object-fit-cover" alt="{{ meal['name'] }}">
+                    </div>
+                    {% else %}
+                    <div class="ratio" style="--bs-aspect-ratio: 70%;">
+                        <img src="/static/img/noimage.jpg" class="w-100 h-100 object-fit-cover" alt="no image">
+                    </div>
+                    {% endif %}
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">
+                            {{ meal["name"] }}
+                        </h5>
+
+                        {% if meal["description"] %}
+                        <p class="text-muted mb-2">
+                            {{ meal["description"] }}
+                        </p>
+                        {% endif %}
+                    <div class="flex-grow-1"></div>
+                        <div class="mt-3 pt-2 border-top text-start">
+                            <p class="fw-bold mb-0">{{ meal["price"] }} грн</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% if meals|length == 0 %}
+            <p class="text-center text-muted">Поки що немає страв у меню</p>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

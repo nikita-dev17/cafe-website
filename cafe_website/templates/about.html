@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Про нас
+{% endblock %}
+
+{% block main %}
+<main>
+  <section class="text-center py-5 bg-light">
+    <div class="container">
+      <h1 class="display-4">Про Bloom Cafe</h1>
+      <p class="lead mt-3">
+        Місце, де кожна чашка кави створює настрій
+      </p>
+    </div>
+  </section>
+
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Наша історія</h2>
+        <p class="lead">
+          Bloom Cafe народилося з простої ідеї — створити місце, куди хочеться повертатися.
+          Ми починали як маленька кав’ярня для друзів, а з часом стали затишним простором
+          для сотень гостей щодня.
+        </p>
+        <p>
+          Для нас кава — це не просто напій. Це момент тиші зранку, тепла розмова вдень
+          та затишок увечері. Ми вкладаємо душу в кожну чашку, кожен десерт і кожну посмішку.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="https://images.unsplash.com/photo-1521017432531-fbd92d768814"
+          class="img-fluid rounded-4"
+          alt="Наша кав’ярня"
+        >
+      </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="container mt-5">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h3>Наша місія</h3>
+        <p>
+          Дарувати людям якісну каву, теплу атмосферу та моменти спокою у швидкому світі.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h3>Наші цінності</h3>
+        <p>
+          Якість, щирість, турбота про гостей та любов до своєї справи.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h3>Наш підхід</h3>
+        <p>
+          Ми працюємо тільки з перевіреними постачальниками та свіжими інгредієнтами.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2">
+        <h2>Наша команда</h2>
+        <p class="lead">
+          Наші бариста — це не просто працівники, а справжні фанати кавової культури.
+          Вони постійно навчаються, експериментують зі смаками та вдосконалюють кожен рецепт.
+        </p>
+        <p>
+          Саме завдяки команді Bloom Cafe має свою душу, характер та неповторну атмосферу.
+        </p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img
+          src="https://images.unsplash.com/photo-1529070538774-1843cb3265df"
+          class="img-fluid rounded-4"
+          alt="Команда Bloom Cafe"
+        >
+      </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="container text-center py-5">
+    <h2>Запрошуємо вас у Bloom Cafe</h2>
+    <p class="lead mt-3">
+      Завітайте до нас на каву, десерт і гарний настрій.
+      Ми завжди раді бачити вас!
+    </p>
+    <a href="/menu" class="btn btn-primary btn-lg mt-3">
+      Переглянути меню
+    </a>
+  </div>
+
+</main>
+{% endblock %}
