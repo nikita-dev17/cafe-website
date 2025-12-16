@@ -6,6 +6,7 @@ Includes a public website and an admin panel for managing menu items.
 ## Features
 
 - Public pages (home, menu, about)
+- UI built with Bootstrap
 - Admin panel
 - CRUD operations for menu items
 - Password hashing with Flask-Bcrypt
@@ -17,6 +18,7 @@ Includes a public website and an admin panel for managing menu items.
 
 - Python
 - Flask
+- Bootstrap 5
 - Flask-SQLAlchemy
 - Flask-Bcrypt
 - Jinja2
