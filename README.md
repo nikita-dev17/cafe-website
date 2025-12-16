@@ -7,7 +7,7 @@ Includes a public website and an admin panel for managing menu items.
 
 - Public pages (home, menu, about)
 - UI built with Bootstrap
-- Admin panel
+- Admin panel built with Flask-Admin
 - CRUD operations for menu items
 - Password hashing with Flask-Bcrypt
 - Database with Flask-SQLAlchemy
@@ -15,13 +15,12 @@ Includes a public website and an admin panel for managing menu items.
 - Modular structure using Blueprints
 
 ## Tech Stack
-
 - Python
-- Flask
-- Bootstrap 5
+- Flask (Blueprints, Flask-Admin)
 - Flask-SQLAlchemy
 - Flask-Bcrypt
 - Jinja2
+- Bootstrap 5
 - SQLite
 
 ## Installation & Run
