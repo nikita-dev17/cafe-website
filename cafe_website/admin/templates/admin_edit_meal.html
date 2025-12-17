@@ -1,38 +1,41 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Редактировать блюдо
+Редагувати страву
 {% endblock %}
 
 {% block main %}
 <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
     <div class="card shadow-lg p-4" style="width: 450px; border-radius: 15px;">
-        <h2 class="text-center mb-4">Редактировать блюдо</h2>
+        <h2 class="text-center mb-4">Редагувати страву</h2>
 
         <form method="POST">
             <div class="mb-3">
-                <label class="form-label">Название</label>
+                <label class="form-label">Назва</label>
                 <input type="text" name="name" class="form-control" value="{{ meal.name }}" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Описание</label>
+                <label class="form-label">Опис</label>
                 <textarea name="description" class="form-control" rows="3">{{ meal.description }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Цена (грн)</label>
+                <label class="form-label">Ціна (грн)</label>
                 <input type="text" name="price" class="form-control" value="{{ meal.price }}" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Путь к фото</label>
+                <label class="form-label">Шлях до фото</label>
                 <input type="text" name="img" class="form-control" value="{{ meal.img }}">
             </div>
 
-            <button type="submit" class="btn btn-warning w-100">Сохранить изменения</button>
+            <button type="submit" class="btn btn-warning w-100">
+                Зберегти зміни
+            </button>
         </form>
 
     </div>
 </div>
 {% endblock %}
+

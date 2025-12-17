@@ -7,11 +7,9 @@ Includes a public website and an admin panel for managing menu items.
 
 ### Home page
 ![Home](screenshots/home.png)
-![Home](screenshots/home2.png)
 
 ### About us
 ![About us](screenshots/about_us.png)
-![About us](screenshots/about_us2.png)
 
 ### Menu
 ![Menu](screenshots/menu.png)
@@ -20,6 +18,8 @@ Includes a public website and an admin panel for managing menu items.
 ![Admin panel](screenshots/admin_login.png)
 ![Admin panel](screenshots/admin_dashboard.png)
 ![Admin panel](screenshots/add_meal.png)
+![Admin panel](screenshots/edit_meal.png)
+
 
 ## Features
 
