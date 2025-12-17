@@ -56,15 +56,21 @@ Includes a public website and an admin panel for managing menu items.
 ## Installation & Run
 
 ```bash
+# Clone the repository
 git clone https://github.com/nikita-dev17/cafe-website.git
 cd cafe-website
 
+# Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate
 
+# Install dependencies
 pip install -r requirements.txt
 
+# Environment variables
 cp .env.example .env
-# edit .env if needed
+# Edit .env if needed
 
+# Run the application
 python -m cafe_website.app
+
