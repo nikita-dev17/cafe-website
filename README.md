@@ -3,6 +3,24 @@
 A simple coffee shop website built with **Flask**.  
 Includes a public website and an admin panel for managing menu items.
 
+## Screenshots
+
+### Home page
+![Home](screenshots/home.png)
+![Home](screenshots/home2.png)
+
+### About us
+![About us](screenshots/about_us.png)
+![About us](screenshots/about_us2.png)
+
+### Menu
+![Menu](screenshots/menu.png)
+
+### Admin panel
+![Admin panel](screenshots/admin_login.png)
+![Admin panel](screenshots/admin_dashboard.png)
+![Admin panel](screenshots/add_meal.png)
+
 ## Features
 
 - Public pages (home, menu, about)
